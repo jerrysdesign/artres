@@ -1,0 +1,354 @@
+/************************* Base styles & Meta
+*************************/
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background: transparent; }
+
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+* html { font-size: 100%; }
+
+html { font-size: 16px; line-height: 1.5em; }
+
+html { font-family: Tahoma, Helvetica, Arial, "Heiti TC", "Microsoft JhengHei", "微軟正黑體", sans-serif; color: black; background: white; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+a { text-decoration: none; color: #ea376a; }
+a:hover { text-decoration: none; }
+
+p { margin: 0; padding: 0; border: 0; margin-bottom: 1.5em; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-size: 2em; line-height: 1.5em; }
+
+.title2, .chance .title2, .recommended .title2, .experience .title2, .search .title2, .search-conditions .title2 { margin: 0; padding: 0; border: 0; font-size: 1.75em; line-height: 1.71429em; }
+
+.title3, .experience .title3 { margin: 0; padding: 0; border: 0; font-size: 1.5em; line-height: 2em; }
+
+.title4, .experience .title4 { margin: 0; padding: 0; border: 0; font-size: 1.25em; line-height: 1.2em; }
+
+.nav a, .title5 { margin: 0; padding: 0; border: 0; font-size: 1.125em; line-height: 1.33333em; }
+
+.input-groups button, .experience .content, .copyright { margin: 0; padding: 0; border: 0; font-size: 0.9375em; line-height: 1.6em; }
+
+.text-centered { text-align: center; }
+
+.news, .text-right { text-align: right; }
+
+.text-uppercase { text-transform: uppercase; }
+
+.lowercase { text-transform: uppercase; }
+
+.nowrap { white-space: nowrap; }
+
+.search-conditions ul, .zero { margin: 0 !important; padding: 0 !important; }
+
+.clear { clear: both; }
+
+.last { margin-right: 0 !important; }
+
+.pause { margin-bottom: 0.75em !important; }
+
+.end, .experience .content { margin-bottom: 0 !important; }
+
+.experience .title3, .no-leader { margin-top: 0; }
+
+.experience .title3, .no-trailer { margin-bottom: 0; }
+
+.handle { cursor: move; }
+
+.normal { font-weight: normal; }
+
+.bold { font-weight: bold; }
+
+.italic { font-style: italic; }
+
+.req, .required { font-weight: normal; color: #ef6465; }
+
+.highlight { background-color: #ffff9e !important; }
+
+.close { padding: 4px 6px; line-height: 1; font-size: 18px; cursor: pointer; color: black; text-decoration: none; opacity: 0.4; }
+.close:before { content: '\00D7'; }
+.close:hover { color: black; opacity: 1; }
+
+.is-hidden { display: none; }
+
+.is-show-block { display: block; }
+
+.is-show-inline, .cont, .news, .copyright { display: inline; display: inline-block; }
+
+.is-table { display: table; width: 100%; }
+
+.masthead__nav-bar { *zoom: 1; }
+.masthead__nav-bar:after { content: ""; display: table; clear: both; }
+
+.moc-logo, .site-logo { color: transparent; font: 0/0 a; text-shadow: none; border: 0 none; }
+
+/* Float-left */
+.fl { display: inline; float: left; display: inline-block; *zoom: 1; }
+.fl:after { content: ""; display: table; clear: both; }
+
+/* Float-right */
+.fr, .news { display: inline; float: right; display: inline-block; *zoom: 1; }
+.fr:after, .news:after { content: ""; display: table; clear: both; }
+
+/* Rest-float */
+.rf { float: none; display: block; }
+
+/* Overflow hidden */
+.oh { overflow: hidden; *zoom: 1; }
+
+/* Center block */
+.center-block { margin-left: auto; margin-right: auto; text-align: center; }
+
+/* Clear float hack */
+.clearfix, .masthead__nav-bar { *zoom: 1; }
+.clearfix:after, .masthead__nav-bar:after { content: ""; display: table; clear: both; }
+
+.page, .main, .banner { *zoom: 1; width: 61.75em; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.page:after, .main:after, .banner:after { content: ""; display: table; clear: both; }
+
+img { max-width: 100%; }
+
+/************************* Layout styles
+*************************/
+.banner, .masthead__nav-bar { margin-bottom: 15px; }
+
+.masthead { margin-top: 10px; }
+
+.primary { width: 46em; float: left; margin-right: 1.25em; display: inline; }
+
+.secondary { width: 14.5em; float: right; margin-right: 0; *margin-left: -1.25em; display: inline; }
+
+/************************* Module Styles
+*************************/
+.news a { color: #ea376a; }
+
+.moc-logo, .site-logo { display: block; background-repeat: no-repeat; }
+
+.logo { width: 9.25em; float: left; margin-right: 1.25em; display: inline; }
+
+.moc-logo { height: 36px; width: 140px; background-image: url(../images/logo.png); }
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) { .moc-logo { /* on retina, use image that's scaled by 2 */ background-image: url(images/logo); background-size: 140px 36px; } }
+
+.site-logo { height: 40px; width: 220px; background-image: url(../images/site-logo.png); }
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) { .site-logo { /* on retina, use image that's scaled by 2 */ background-image: url(images/logo); background-size: 220px 40px; } }
+
+.banner { height: 62px; border-bottom: 2px solid #ea376a; }
+.banner .logo { width: 19.75em; float: left; margin-right: 1.25em; display: inline; }
+
+.nav ul, .nav li { list-style: none; margin: 0; padding: 0; }
+.nav li { float: left; }
+.nav a { display: block; line-height: 36px; }
+
+.site-navigation a { padding: 0 1.5em; }
+.site-navigation a:hover { text-decoration: none; }
+
+.language-navigation { float: right; }
+.language-navigation a { padding: 0 1em; }
+.language-navigation a:hover { text-decoration: none; }
+
+.masthead__nav-bar { display: inline-block; width: 51.25em; float: right; margin-right: 0; *margin-left: -1.25em; display: inline; border: 1px solid #ea376a; }
+
+.news { width: 40.75em; float: right; margin-right: 0; *margin-left: -1.25em; display: inline; }
+
+.chance, .recommended, .experience, .search, .search-conditions { margin-bottom: 15px; }
+.chance .title2, .recommended .title2, .experience .title2, .search .title2, .search-conditions .title2 { letter-spacing: .1em; color: #b3b3b3; text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1); margin-top: 0.5em; margin-bottom: 0.5em; }
+
+.chance { margin-left: 0; }
+.chance li { border-left: 4px solid #ea376a; }
+
+/* 本月國際藝術村推薦 */
+.recommended { *zoom: 1; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.recommended:after { content: ""; display: table; clear: both; }
+
+.recommended { padding: 20px; }
+
+.card { padding: 8px 8px 40px; min-height: 255px; box-shadow: 0 3px 5px #d7174e; width: 31.52174%; float: left; margin-right: 2.71739%; display: inline; }
+.card:nth-child(3n) { float: right; margin-right: 0; *margin-left: -1.25em; display: inline; }
+.card:hover { box-shadow: 0 2px 2px #f9c1d1; }
+
+/* 整合檢索 */
+.input-groups { display: table; }
+.input-groups input, .input-groups .btn-append { display: table-cell; }
+.input-groups input, .input-groups button { background: #fff; border: 1px solid #ea376a; position: relative; z-index: 2; -webkit-appearance: none; padding: 2px 7px; line-height: 1.5; margin: 0; height: 30px; }
+.input-groups button { background-color: #ea376a; }
+
+.search-conditions { background-color: #e0e0fc; }
+.search-conditions label { margin-right: .809em; margin-left: .809em; }
+.search-conditions li + li { margin-top: 1px; }
+
+/* 駐村心得 */
+.experience { background-color: #ff9933; }
+.experience .title4 { margin-top: 0.5em; margin-bottom: 0.5em; }
+.experience .content { line-height: 1.2; }
+
+.colophon { padding: 20px; background-color: #f6aac0; }
+.colophon .moc-logo { margin-top: 20px; margin-left: 20px; }
+
+.copyright { color: #002566; margin-left: 20px; }
+
+/* helper */
+.recommended, .experience { padding-top: 1px; }
+
+.box, .search-conditions, .experience { padding: 15px; }
+
+.list--simple, .search-conditions, .lists--dash, .chance { list-style: none; }
+.list--simple ul, .search-conditions ul, .lists--dash ul, .chance ul, .list--simple ol, .search-conditions ol, .lists--dash ol, .chance ol { padding: 0; list-style: none; }
+
+.lists--dash li, .chance li { line-height: 1.88; padding-left: 20px; margin-bottom: 8px; }
+
+.text--color--white, .site-navigation a, .recommended .title2, .input-groups button, .experience .title3, .experience .title4, .experience .content, .cont, .language-page__title { color: white; }
+
+.text--color--black, .chance a, .card { color: #333333; }
+
+.bg--color--white, .language-navigation a, .card { background-color: white; }
+
+.bg--color--primeary, .site-navigation a, .masthead__nav-bar, .recommended { background-color: #ea376a; }
+
+/************************* JS-based classes
+*************************/
+/************************* Vendor classes
+*************************/
+/************************* Pages
+*************************/
+/*! demo for a page */
+/*! demo for parital 1 */
+.language-page { display: table; width: 100%; height: 100%; }
+
+.is-table-row { display: table-row; }
+
+.language-page__tc, .language-page__en { display: table-cell; width: 50%; vertical-align: middle; }
+
+.language-page__tc { background: #ea376a; text-align: right; }
+
+.language-page__en { background-color: #c8cf54; padding-top: 100px; }
+
+.cont { width: 320px; padding: 20px; font-size: 2em; margin-bottom: 120px; }
+
+.language-page__title { font-size: 1.5em; line-height: 1; }
+
+.tc__banner { margin-right: -20px; }
+
+.language-page__copyright { padding: 20px; color: #002566; }
+
+.en__banner { margin-left: -20px; }
+
+.m-b-40, .language-page__title, .tc__banner, .en__banner { margin-bottom: 40px; }
+
+body.fixed { position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; }
