@@ -1,0 +1,116 @@
+@import "compass/css3";
+@import "compass/reset";
+$color:     #666;
+$primary:   #ea376a;
+$secondary: #1fb5a9;
+$tertiary:  #ff95bd;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello/fontello.eot');
+  src: url('../fonts/fontello/fontello.eot#iefix') format('embedded-opentype'),
+       url('../fonts/fontello/fontello.woff') format('woff'),
+       url('../fonts/fontello/fontello.ttf') format('truetype'),
+       url('../fonts/fontello/fontello.svg#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+html {
+  min-width: 320px;
+}
+body {
+  font-family: 'Helvetica Neue',dath3, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  color: $color;
+}
+a {
+  text-decoration: none;
+  color: $primary;
+}
+img {
+  max-width: 100%;
+}
+
+@import "susy";
+$total-columns  : 2;
+$column-width   : 8em;
+$gutter-width   : 5em;
+$grid-padding   : 3em;
+
+.container { @include container; }
+
+section {
+  @include span-columns(1, 2);
+  @include nth-omega(2n);
+}
+
+/* IE Support*/
+.noie8 , .noscript {
+  background: #FFDFDF; 
+  border: 5px solid #FF2F2F;
+  clear: both;
+  color: #555;
+  display: block;
+  font-size: 1.5rem;
+  padding: 30px 10px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width:100%;
+  @include box-sizing (border-box);
+}
+.noscript {
+  position: fixed;
+  z-index: 10000;
+}
+h2 span {
+  font-family: dath5;
+}
+
+.logo {
+  width: 100px;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+.lang-bar {
+  background-color: $primary;
+  text-align: right;
+  font-size: .85em;
+  a {
+    display: inline-block;
+    color: #fff;
+  }
+}
+.header, .lang-bar {
+  padding: 0 1em;
+}
+.header {
+  background: rgba(234,55,106,.5);
+  vertical-align: middle;
+  padding: 10px 10px 5px;
+}
+.content {
+  a {
+    color: rgb(100,100,100);
+  }
+}
+section {
+  text-align: center;
+  h2 {
+    margin-bottom: 0.5em;
+    color: $primary;
+    font-size: 1em;
+    line-height: 1.25;
+  }
+}
+section {
+  padding-top: 20px;
+}
