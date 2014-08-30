@@ -55,6 +55,7 @@
 }
 
 /* 本月國際藝術村推薦 */
+$container-style: fluid;
 @include with-grid-settings(9,15em,1em,0) {
     .recommended { @include container; }
 }

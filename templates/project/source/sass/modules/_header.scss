@@ -22,12 +22,14 @@
 	@extend %ir;
 	background-repeat: no-repeat;
 }
+.logo {
+	@include span-columns(2,12);
+}
 .moc-logo {
 	@extend %logo;
 	@include size(140px 36px);
 	background-image: url(#{$path}/logo.png);
 	@include image-2x(images/logo, 140px, 36px);
-	@include span-columns(2,12);
 }
 
 .site-logo {
@@ -35,7 +37,6 @@
 	@include size(220px 40px);
 	background-image: url(#{$path}/site-logo.png);
 	@include image-2x(images/logo, 220px, 40px);
-	@include span-columns(4,12);
 }
 
 .banner {
@@ -43,4 +44,8 @@
 	@extend %container;
 	@extend %block1;
 	border-bottom: 2px solid $colorPrimeary;
+	
+	.logo {
+		@include span-columns(4,12);
+	}
 }

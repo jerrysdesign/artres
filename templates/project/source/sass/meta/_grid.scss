@@ -18,6 +18,7 @@ $total-columns  : 12;
 $column-width   : 4em;
 $gutter-width   : 1.25em;
 $grid-padding   : 0;
+$container-style: static;
 // border-box-sizing()
 @include border-box-sizing;
 
