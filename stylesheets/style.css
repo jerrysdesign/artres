@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-size: 2em; line-
 
 .title4, .experience .title4 { margin: 0; padding: 0; border: 0; font-size: 1.25em; line-height: 1.2em; }
 
-.nav a, .title5 { margin: 0; padding: 0; border: 0; font-size: 1.125em; line-height: 1.33333em; }
+.nav li, .site-navigation li, .title5 { margin: 0; padding: 0; border: 0; font-size: 1.125em; line-height: 1.33333em; }
 
 .input-groups button, .experience .content, .copyright { margin: 0; padding: 0; border: 0; font-size: 0.9375em; line-height: 1.6em; }
 
@@ -256,14 +256,24 @@ img { max-width: 100%; }
 .nav li { float: left; }
 .nav a { display: block; line-height: 36px; }
 
-.site-navigation a { padding: 0 1.5em; }
-.site-navigation a:hover { text-decoration: none; }
+.site-navigation li, .site-navigation a { padding: 0 .5em; }
+.site-navigation li:hover, .site-navigation a:hover { text-decoration: none; }
+.site-navigation li { display: block; line-height: 36px; }
 
 .language-navigation { float: right; }
 .language-navigation a { padding: 0 1em; }
 .language-navigation a:hover { text-decoration: none; }
 
 .masthead__nav-bar { display: inline-block; width: 51.25em; float: right; margin-right: 0; *margin-left: -1.25em; display: inline; border: 1px solid #ea376a; }
+
+ul.dropdown { position: relative; }
+ul.dropdown li { float: left; }
+ul.dropdown li.hover, ul.dropdown li:hover { position: relative; }
+ul.dropdown ul { visibility: hidden; position: absolute; width: 9em; top: 100%; left: 0; font-size: .85em; }
+ul.dropdown ul li { float: none; }
+ul.dropdown ul li a { width: 100%; }
+ul.dropdown ul ul { left: 100%; top: 0; }
+ul.dropdown li:hover > ul { visibility: visible; }
 
 .news { width: 40.75em; float: right; margin-right: 0; *margin-left: -1.25em; display: inline; }
 
@@ -313,13 +323,13 @@ img { max-width: 100%; }
 
 .lists--dash li, .chance li { line-height: 1.88; padding-left: 20px; margin-bottom: 8px; }
 
-.text--color--white, .site-navigation a, .recommended .title2, .input-groups button, .experience .title3, .experience .title4, .experience .content, .cont, .language-page__title { color: white; }
+.text--color--white, .site-navigation li, .site-navigation a, .recommended .title2, .input-groups button, .experience .title3, .experience .title4, .experience .content, .cont, .language-page__title { color: white; }
 
 .text--color--black, .chance a, .card { color: #333333; }
 
 .bg--color--white, .language-navigation a, .card { background-color: white; }
 
-.bg--color--primeary, .site-navigation a, .masthead__nav-bar, .recommended { background-color: #ea376a; }
+.bg--color--primeary, .site-navigation li, .site-navigation a, .masthead__nav-bar, .recommended { background-color: #ea376a; }
 
 /************************* JS-based classes
 *************************/
