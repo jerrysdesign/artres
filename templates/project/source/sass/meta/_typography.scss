@@ -18,7 +18,7 @@ html {
     //@include debug-vertical-alignment; // Show horizontal line borders.
     font-family: $fontTC;
     color: $black;
-    background: $white;
+    background: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -29,7 +29,7 @@ a {
     @include hover-link;
     // Apply colors to different anchor states (normal, hover, active, visited, focus).
     // Those states not specified will inherit.
-    @include link-colors($blue);
+    @include link-colors(darken($colorPrimeary, 20));
 }
 
 p {
@@ -42,6 +42,11 @@ p {
 //    Various Headings
 //************************
 
+#{headings()} {
+  @include reset-box-model;
+  @include adjust-font-size-to(32px);
+}
+
 %h1 { @include reset-box-model; @include adjust-font-size-to(32px); }
 %h2 { @include reset-box-model; @include adjust-font-size-to(28px); }
 %h3 { @include reset-box-model; @include adjust-font-size-to(24px); }
@@ -50,8 +55,3 @@ p {
 %h6 { @include reset-box-model; @include adjust-font-size-to(15px); }
 
 // More info here: http://beta.compass-style.org/reference/compass/typography/
-
-#{headings()} {
-  @include reset-box-model;
-  @include adjust-font-size-to(32px);
-}
