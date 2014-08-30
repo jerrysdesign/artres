@@ -25,7 +25,7 @@
 
 .news {
 	@extend %text-right;
-	@extend %is-shown-inline;
+	@extend %is-show-inline;
 	@extend %fr;
 	@include span-columns(8 omega,12);;
 	a {
@@ -164,7 +164,8 @@ $container-style: fluid;
 .copyright {
 	color: #002566;
 	@extend %h6;
-	@extend %is-shown-inline;  
+	@extend %is-show-inline;  
+	margin-left: 20px;
 }
 
 /* helper */
