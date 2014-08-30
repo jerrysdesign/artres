@@ -28,12 +28,12 @@
 				h2.title2 駐村機會
 				ul
 					-5.times do
-						li =zh_lorem_sentences 2
+						li: a href='javascript:;' =zh_lorem_sentences 2
 			.recommended
 				h2.title2 本月國際藝術村推薦
-				.wrap
+				.block--3
 					-3.times do
-						.card
+						a.card href='javascrip:;'
 							=image_tag(lorem_image("400x300"))
 							span<> =zh_lorem_words 5
 							span<> =lorem_words 3
@@ -65,11 +65,12 @@
 							label for="checkbox-5" Option 5
 			.box.experience
 				h3.title3 駐村心得
-				=image_tag(lorem_image("400x300"))
-				h4.title4
-					| 藝術村
-					span< =lorem_last_name
-				p.content =zh_lorem_words 50
+				a href='javascript:;'
+					=image_tag(lorem_image("400x300"))
+					h4.title4
+						| 藝術村
+						span< =lorem_last_name
+					p.content =zh_lorem_words 50
 	footer.colophon
 		.logo
 			.moc-logo

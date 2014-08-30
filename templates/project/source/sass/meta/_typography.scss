@@ -15,27 +15,29 @@ $base-half-leader: $base-leader / 2;
 //************************
 
 html {
-    //@include debug-vertical-alignment; // Show horizontal line borders.
-    font-family: $fontTC;
-    color: $black;
-    background: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+	//@include debug-vertical-alignment; // Show horizontal line borders.
+	font-family: $fontTC;
+	color: $black;
+	background: $white;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 a {
-    // Apply "text-decoration: underline" only on hover.
-    @include hover-link;
-    // Apply colors to different anchor states (normal, hover, active, visited, focus).
-    // Those states not specified will inherit.
-    @include link-colors(darken($colorPrimeary, 20));
+	text-decoration: none;
+	// Apply colors to different anchor states (normal, hover, active, visited, focus).
+	// Those states not specified will inherit.
+	@include link-colors($colorPrimeary);
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 p {
-    @include reset-box-model;
-    // Apply margin at the bottom of all paragraphs with the value of $base-line-height
-    @include margin-trailer;
+	@include reset-box-model;
+	// Apply margin at the bottom of all paragraphs with the value of $base-line-height
+	@include margin-trailer;
 }
 
 //************************

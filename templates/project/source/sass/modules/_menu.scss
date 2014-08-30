@@ -33,8 +33,8 @@
 }
 .site-navigation {
     a {
-        @extend %background-primeary;
-        color: #fff;
+        @extend .bg--color--primeary;
+        @extend .text--color--white;
         padding: 0 1.5em;
         &:hover {
             text-decoration: none;
@@ -44,8 +44,7 @@
 .language-navigation {
     float: right;
     a {
-        background-color: #fff;
-        @extend %primeary;
+        @extend .bg--color--white;
         padding: 0 1em;
         &:hover {
             text-decoration: none;
@@ -57,7 +56,7 @@
     display: inline-block;
     @include span-columns(10 omega,12);
     // width: columns(10,12);
-    @extend %background-primeary;
+    @extend .bg--color--primeary;
     border: 1px solid $colorPrimeary;
     @extend %pie-clearfix;
     @extend %block1;
