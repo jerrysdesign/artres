@@ -4,10 +4,22 @@
 			a.moc-logo href='javascript:;' 文化部
 		.masthead__nav-bar
 			.nav.site-navigation
-				ul
+				ul.dropdown
 					li: a href='javascript:;' 關於我們
-					li: a href='javascript:;' 藝術村
-					li: a href='javascript:;' 駐村經驗
+					li
+						| 藝術村
+						ul.sub_menu
+						 	li: a href='javascript:;' 國內藝術村
+						 	li: a href='javascript:;' 國際藝術村
+						 	li: a href='javascript:;' 地圖瀏覽國內
+						 	li: a href='javascript:;' 地圖瀏覽國際
+
+					li
+						| 駐村經驗
+						ul.sub_menu
+					 		li: a href='javascript:;' 國內藝術村
+					 		li: a href='javascript:;' 國際藝術村
+					li: a href='javascript:;' 駐村機會
 					li: a href='javascript:;' 相關連結
 					li: a href='javascript:;' 聯絡我們
 			.nav.language-navigation
@@ -80,3 +92,7 @@
 		 | 本網域所登載資料歡迎連結，如要重製複製或散佈請先取得本部同意。︱ 聯絡窗口
 		 br
 		 | 電話：02-8512-6000 建議最佳瀏覽螢幕解析度1024x768︱網頁更新日期：2014-01-08
+
+script type='text/javascript' src='vendor/jquery-1.9.1.min.js'
+script type='text/javascript' src='vendor/jquery-migrate-git.min.js'
+script type='text/javascript' src='javascripts/menu.js'

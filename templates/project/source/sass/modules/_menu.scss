@@ -17,47 +17,83 @@
 //     }
 // }
 %nav, .nav {
-    ul, li {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    li {
-        float: left;
-    }
-    a {
-        display: block;
-        @extend %h5;
-        line-height: 36px;
-    }
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		float: left;
+		@extend %h5;
+	}
+	a {
+		display: block;
+		line-height: 36px;
+	}
 }
 .site-navigation {
-    a {
-        @extend .bg--color--primeary;
-        @extend .text--color--white;
-        padding: 0 1.5em;
-        &:hover {
-            text-decoration: none;
-        }
-    }
+	li, a {
+		@extend .bg--color--primeary;
+		@extend .text--color--white;
+		padding: 0 .5em;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	li {
+		display: block;
+		@extend %h5;
+		line-height: 36px;
+	}
 }
 .language-navigation {
-    float: right;
-    a {
-        @extend .bg--color--white;
-        padding: 0 1em;
-        &:hover {
-            text-decoration: none;
-        }
-    }
+	float: right;
+	a {
+		@extend .bg--color--white;
+		padding: 0 1em;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .masthead__nav-bar {
-    display: inline-block;
-    @include span-columns(10 omega,12);
-    // width: columns(10,12);
-    @extend .bg--color--primeary;
-    border: 1px solid $colorPrimeary;
-    @extend %pie-clearfix;
-    @extend %block1;
+	display: inline-block;
+	@include span-columns(10 omega,12);
+	// width: columns(10,12);
+	@extend .bg--color--primeary;
+	border: 1px solid $colorPrimeary;
+	@extend %pie-clearfix;
+	@extend %block1;
+}
+
+ul.dropdown {
+	position: relative;
+	li {
+		float: left;
+		&.hover, &:hover {
+			position: relative;
+		}
+	}
+	ul {
+		visibility: hidden;
+		position: absolute;
+		width: 9em;
+		top: 100%;
+		left: 0;
+		font-size: .85em;
+		li {
+			float: none;
+			a {
+				width: 100%;
+			}
+		}
+		ul {
+			left: 100%;
+			top: 0;
+		}
+	}
+	li:hover > ul {
+		visibility: visible;
+	}
 }
