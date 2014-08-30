@@ -1,0 +1,46 @@
+//************************
+//    Header Styles
+//************************
+
+%primeary {
+    color: $colorPrimeary;
+}
+%background-primeary {
+	background-color: $colorPrimeary;
+}
+.site {
+    // @include m(title) {
+    //     @extend %h1;
+    // }
+    // @include m(subtitle) {
+    //     @extend %h3;
+    // }
+}
+
+%logo {
+	display: block;
+	@extend %ir;
+	background-repeat: no-repeat;
+}
+.moc-logo {
+	@extend %logo;
+	@include size(140px 36px);
+	background-image: url(#{$path}/logo.png);
+	@include image-2x(images/logo, 140px, 36px);
+	@include span-columns(2,12);
+}
+
+.site-logo {
+	@extend %logo;
+	@include size(220px 40px);
+	background-image: url(#{$path}/site-logo.png);
+	@include image-2x(images/logo, 220px, 40px);
+	@include span-columns(4,12);
+}
+
+.banner {
+	height: 62px;
+	@extend %container;
+	@extend %block1;
+	border-bottom: 2px solid $colorPrimeary;
+}

@@ -1,0 +1,64 @@
+//************************
+//    Menu Styles
+//************************
+
+// .sitemenu {
+//     @include m(item) {
+//         padding: 0 1em;
+//         &:hover {
+//             border-top: 3px solid $red;
+//         }
+//         @include m(link) {
+//             color: $red;
+//             &:hover {
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+// }
+%nav, .nav {
+    ul, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        float: left;
+    }
+    a {
+        display: block;
+        @extend %h5;
+        line-height: 36px;
+    }
+}
+.site-navigation {
+    a {
+        @extend %background-primeary;
+        color: #fff;
+        padding: 0 1.5em;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.language-navigation {
+    float: right;
+    a {
+        background-color: #fff;
+        @extend %primeary;
+        padding: 0 1em;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.masthead__nav-bar {
+    display: inline-block;
+    @include span-columns(10 omega,12);
+    // width: columns(10,12);
+    @extend %background-primeary;
+    border: 1px solid $colorPrimeary;
+    @extend %pie-clearfix;
+    @extend %block1;
+}

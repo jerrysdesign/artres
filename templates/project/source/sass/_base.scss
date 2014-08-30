@@ -1,0 +1,25 @@
+//************************
+//    Basic reset
+//************************
+
+// @import "compass/reset";
+@import "vendor/normalize";
+
+//************************
+//    Importing Metas
+//************************
+
+@import "meta/variables";
+@import "meta/colors";
+@import "meta/mixins";
+@import "meta/grid"; // requires Susy 2.0.0 or later
+@import "meta/typography";
+@import "meta/helpers";
+
+//************************
+//    Base Styles
+//************************
+
+img {
+    max-width: 100%;
+}
