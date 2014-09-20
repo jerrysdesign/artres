@@ -11,8 +11,8 @@
 						ul.sub_menu
 						 	li: a href='javascript:;' 國內藝術村
 						 	li: a href='javascript:;' 國際藝術村
-						 	li: a href='javascript:;' 地圖瀏覽國內
-						 	li: a href='javascript:;' 地圖瀏覽國際
+						 	li: a href='javascript:;' 地圖瀏覽_國內
+						 	li: a href='javascript:;' 地圖瀏覽_國際
 
 					li
 						| 駐村經驗
@@ -35,54 +35,78 @@
 					b NEWS: 
 					=zh_lorem_sentences 1 
 	main.main
-		.primary
-			.chance
-				h2.title2 駐村機會
-				ul
-					-5.times do
-						li: a href='javascript:;' =zh_lorem_sentences 2
-			.recommended
-				h2.title2 本月國際藝術村推薦
-				.block--3
-					-3.times do
+		/! 修改結構增加 div.row
+		.row
+			.primary
+				.chance
+					h2.title2 駐村機會
+					ul
+						-5.times do
+							li: a href='javascript:;' =zh_lorem_sentences 2
+			.secondary
+				.search
+					h2.title2 整合查詢
+					form
+						.input-groups
+							input type="text" name="search" placeholder="Search"
+							span.btn-append
+								button class="btn" 查詢
+					.box.search-conditions
+						ul.forms-list
+							li
+								input type="checkbox" name="checkbox-1" id="checkbox-1"
+								label for="checkbox-1" Option 1
+							li
+								input type="checkbox" name="checkbox-1" id="checkbox-2"
+								label for="checkbox-2" Option 2
+							li
+								input type="checkbox" name="checkbox-1" id="checkbox-3"
+								label for="checkbox-3" Option 3
+							li
+								input type="checkbox" name="checkbox-1" id="checkbox-4"
+								label for="checkbox-4" Option 4
+							li
+								input type="checkbox" name="checkbox-1" id="checkbox-1"
+								label for="checkbox-5" Option 5
+		/! 修改結構增加 div.row
+		.row
+			.primary
+				.recommended
+					h2.title2 本月國際藝術村推薦
+					.block--3
 						a.card href='javascrip:;'
-							=image_tag(lorem_image("400x300"))
-							span<> =zh_lorem_words 5
-							span<> =lorem_words 3
-		.secondary
-			.search
-				h2.title2 整合查詢
-				form
-					.input-groups
-						input type="text" name="search" placeholder="Search"
-						span.btn-append
-							button class="btn" 查詢
-				/! 圖面上看不出此區域 .search-conditions 是獨立區塊或區塊或是查詢條件，如果是查詢條件請移入 form 中
-				.box.search-conditions
-					ul.forms-list
-						li
-							input type="checkbox" name="checkbox-1" id="checkbox-1"
-							label for="checkbox-1" Option 1
-						li
-							input type="checkbox" name="checkbox-1" id="checkbox-2"
-							label for="checkbox-2" Option 2
-						li
-							input type="checkbox" name="checkbox-1" id="checkbox-3"
-							label for="checkbox-3" Option 3
-						li
-							input type="checkbox" name="checkbox-1" id="checkbox-4"
-							label for="checkbox-4" Option 4
-						li
-							input type="checkbox" name="checkbox-1" id="checkbox-1"
-							label for="checkbox-5" Option 5
-			.box.experience
-				h3.title3 駐村心得
-				a href='javascript:;'
-					=image_tag(lorem_image("400x300"))
-					h4.title4
-						| 藝術村
-						span< =lorem_last_name
-					p.content =zh_lorem_words 50
+							/! 圖片尺寸需大於 203x153
+							/! 將圖片放入 div.img-vertical-align 中，如果大於 203x153 的直式圖片
+							.img-vertical-align
+								= image_tag (lorem_image("200x400&text=[if Vertical 200x400]"), :class=>"user-avatar")
+							/! 資料只塞入一個 span
+							span<> =zh_lorem_words 50
+						a.card href='javascrip:;'
+							/! 圖片尺寸需大於 203x153
+							/! 將圖片放入 div.img-vertical-align 中，如果大於 203x153 的橫式圖片
+							.img-vertical-align
+								= image_tag (lorem_image("400x200&text=[if Horizontal 400x200]"), :class=>"user-avatar")
+							/! 資料只塞入一個 span
+							span<> =zh_lorem_words 50
+						a.card href='javascrip:;'
+							/! 圖片尺寸需大於 203x153
+							/! 將圖片放入 div..img-vertical-align 中，如果小於 203x153 的圖片
+							.img-vertical-align
+								=image_tag(lorem_image("100x100"))
+							/! 資料只塞入一個 span
+							span<> =zh_lorem_words 50
+			.secondary
+				.box.experience
+					h3.title3 駐村心得
+					a href='javascript:;'
+						/! 圖片尺寸需大於 202x157
+						/! 將圖片放入 div.img-vertical-align 中
+						.img-vertical-align
+							=image_tag(lorem_image("400x400"))
+						h4.title4
+							| 藝術村
+							span< =lorem_last_name
+						p.content =zh_lorem_words 50
 	footer.colophon
 		.logo
 			.moc-logo

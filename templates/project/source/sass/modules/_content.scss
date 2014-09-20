@@ -75,12 +75,18 @@ $container-style: fluid;
 	@extend .text--color--black;
 	@extend .bg--color--white;
 	padding: 8px 8px 40px;
-	min-height: 255px;
+	height: 255px;
 	box-shadow: 0 3px 5px darken($colorPrimeary, 10);
 	@include span-columns(3,9);
 	&:nth-child(3n) { @include omega;}
 	&:hover {
 		box-shadow: 0 2px 2px lighten($colorPrimeary, 30);
+	}
+	/* 一行高度24px，寫死2行48px，超出隱藏 */
+	span {
+		height: 48px;
+		overflow: hidden;
+		display: block;
 	}
 }
 
@@ -89,24 +95,40 @@ $container-style: fluid;
 }
 .input-groups {
 	display: table;
-	input, .btn-append {
-		display: table-cell;
+	height: 30px;
+	input {
+		width: 100%;
 	}
-	input, button {
-		background: #fff;
+	.btn-append {
+		width: 1%;
+		vertical-align: middle;
+		background-color: $colorPrimeary;
+	}
+	input, .btn-append {
+		display: table-cell !important;
 		border: 1px solid $colorPrimeary;
+	}
+
+	input, .btn {
+		background: #fff;
 		position: relative;
 		z-index: 2;
 		-webkit-appearance: none;
 		padding: 2px 7px;
 		line-height: 1.5;
 		margin: 0;
-		height: 30px;
 	}
-	button {
+	
+	.btn {
+		vertical-align: top;
+		text-align: center;
 		background-color: $colorPrimeary;
 		@extend .text--color--white;
 		@extend %h6;
+		display: block;
+		padding: 2px 7px;
+		white-space: nowrap;
+		height: 28px;
 	}
 }
 
@@ -149,9 +171,25 @@ $container-style: fluid;
 		line-height: 1.2;
 		@extend .end;
 		@extend .text--color--white;
+		/*寫死高度*/
+		height: 72px;
+		overflow: hidden;
 	}
 }
-
+.img-vertical-align {
+	overflow: hidden;
+	text-align: center;
+	img {
+		width: 100%;
+		@include vertical-align;	
+	}
+	.experience & {
+		height: 157px;
+	}
+	.recommended & {
+		height: 153px;
+	}
+}
 .colophon {
 	padding: 20px;
 	background-color: lighten($colorPrimeary, 25);
