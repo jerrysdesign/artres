@@ -2,3 +2,6 @@ templates/project/source/.sass-cache/**/*
 templates/project/source/.coffeescript-cache/**/*
 templates/project/source/stylesheets/
 templates/project/source/fire_app_log.txt
+
+templates/mobile/.sass-cache/**/*
+templates/mobile/fire_app_log.txt
