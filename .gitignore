@@ -1,7 +1,11 @@
-templates/project/source/.sass-cache/**/*
-templates/project/source/.coffeescript-cache/**/*
-templates/project/source/stylesheets/
-templates/project/source/fire_app_log.txt
+templates/pc/source/.sass-cache/**/*
+templates/pc/source/.coffeescript-cache/**/*
+templates/pc/source/stylesheets/
+templates/pc/source/fire_app_log.txt
 
-templates/mobile/.sass-cache/**/*
-templates/mobile/fire_app_log.txt
+templates/mobile/source/.sass-cache/**/*
+templates/mobile/source/fire_app_log.txt
+templates/mobile/source/stylesheets/
+
+templates/pc/source/**/*
+templates/mobile/source/**/*
