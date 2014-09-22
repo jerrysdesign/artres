@@ -21,6 +21,7 @@
 	display: block;
 	@extend %ir;
 	background-repeat: no-repeat;
+	background-size: contain;
 }
 .logo {
 	@include span-columns(2,12);
@@ -29,19 +30,19 @@
 	@extend %logo;
 	@include size(140px 36px);
 	background-image: url(#{$path}/logo.png);
-	@include image-2x(images/logo, 140px, 36px);
+	@include image-2x("#{$path}/logo.png", 140px, 36px);
 }
 
 .site-logo {
 	@extend %logo;
 	@include size(220px 40px);
 	background-image: url(#{$path}/site-logo.png);
-	@include image-2x(images/logo, 220px, 40px);
+	@include image-2x("#{$path}/logo.png", 220px, 40px);
 }
 
 .banner {
 	height: 62px;
-	@extend %container;
+	@include container;
 	@extend %block1;
 	border-bottom: 2px solid $colorPrimeary;
 	

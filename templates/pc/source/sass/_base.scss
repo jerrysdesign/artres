@@ -20,6 +20,11 @@
 //    Base Styles
 //************************
 
+body {
+	padding-top: 1px;
+	margin-top: -1px;
+	/* 看到鬼 */
+}
 img {
     max-width: 100%;
 }

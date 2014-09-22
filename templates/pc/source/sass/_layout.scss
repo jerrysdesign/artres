@@ -9,11 +9,11 @@
 }
 
 .page {
-	@extend %container;
+	@include container;
 }
 
 .main {
-	@extend %container;
+	@include container;
 }
 
 .primary {
@@ -25,5 +25,5 @@
 }
 
 .row {
-	@extend %container;
+	@include container;
 }

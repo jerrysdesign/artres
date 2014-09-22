@@ -132,7 +132,7 @@
 	@include is-table;
 }
 
-Clearfixes
+// Clearfixes
 %clearfix {
     @include clearfix;
 }
@@ -184,6 +184,6 @@ Clearfixes
 	@include pie-clearfix;
 }
 
-%container {
+%container, .container {
 	@include container;
 }
